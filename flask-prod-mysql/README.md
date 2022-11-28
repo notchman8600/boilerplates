@@ -1,4 +1,4 @@
-# Flask(develop mode) with MySQL Server
+# Flask(production mode) with MySQL Server
 
 このディレクトリはFlaskを本番モードで立ち上げる構成です。
 MySQLコンテナも起動しています。
