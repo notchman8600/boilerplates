@@ -1,7 +1,10 @@
 # Flask(develop mode) with MySQL Server
 
-このディレクトリはFlaskを開発者モードで立ち上げる構成です。
+このディレクトリはFlaskを本番モードで立ち上げる構成です。
 MySQLコンテナも起動しています。
+WSGIサーバーにはuwsgi、Webサーバーはnginxを使っています。
+デフォルトは80番でリクエストを受け付けています。
+こちらのコンテナはマルチステージビルドを用いているので少しコンテナサイズが小さくなるはずです。
 
 ## How to use
 
@@ -15,12 +18,12 @@ docker compose up -d
 ## How to test
 
 [UI Test]
-access to the http://localhost:5001
+access to the http://localhost
 
 [API Test]
 
 ```sh
-curl http://localhost:5001/api/v1/example
+curl http://localhost/api/v1/example
 ```
 
 ## 解説
